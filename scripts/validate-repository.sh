@@ -6,8 +6,9 @@ required_files=(
   "CLAUDE.md"
   "CLAUDE.local.md"
   "WORKFLOW.md"
-  ".claude/skills/harness-setup/SKILL.md"
-  ".claude/skills/harness-verify/SKILL.md"
+  ".claude/skills/harness-local-server/SKILL.md"
+  ".claude/skills/harness-playwright-evidence/SKILL.md"
+  ".claude/skills/harness-linear-loop/SKILL.md"
   ".github/pull_request_template.md"
   "docs/README.md"
   "docs/TEMPLATE.md"
@@ -39,17 +40,21 @@ grep -q "kind: linear" WORKFLOW.md
 grep -q "project_slug" WORKFLOW.md
 grep -q "## Claude Workpad" WORKFLOW.md
 grep -q "Human Review" WORKFLOW.md
-grep -q "name: harness-setup" .claude/skills/harness-setup/SKILL.md
-grep -q "one-command startup" .claude/skills/harness-setup/SKILL.md
-grep -q "health check" .claude/skills/harness-setup/SKILL.md
-grep -q "env.example" .claude/skills/harness-setup/SKILL.md
-grep -q "logs" .claude/skills/harness-setup/SKILL.md
-grep -q "name: harness-verify" .claude/skills/harness-verify/SKILL.md
-grep -q "Playwright" .claude/skills/harness-verify/SKILL.md
-grep -q "screenshot" .claude/skills/harness-verify/SKILL.md
-grep -q "trace" .claude/skills/harness-verify/SKILL.md
-grep -q "## Claude Workpad" .claude/skills/harness-verify/SKILL.md
-grep -q "Human Review" .claude/skills/harness-verify/SKILL.md
+grep -q "name: harness-local-server" .claude/skills/harness-local-server/SKILL.md
+grep -q "bootable" .claude/skills/harness-local-server/SKILL.md
+grep -q "health check" .claude/skills/harness-local-server/SKILL.md
+grep -q "env.example" .claude/skills/harness-local-server/SKILL.md
+grep -q "logs" .claude/skills/harness-local-server/SKILL.md
+grep -q "name: harness-playwright-evidence" .claude/skills/harness-playwright-evidence/SKILL.md
+grep -q "Playwright" .claude/skills/harness-playwright-evidence/SKILL.md
+grep -q "video start" .claude/skills/harness-playwright-evidence/SKILL.md
+grep -q "video stop" .claude/skills/harness-playwright-evidence/SKILL.md
+grep -q "trace" .claude/skills/harness-playwright-evidence/SKILL.md
+grep -q "name: harness-linear-loop" .claude/skills/harness-linear-loop/SKILL.md
+grep -q "Linear API" .claude/skills/harness-linear-loop/SKILL.md
+grep -q "## Claude Workpad" .claude/skills/harness-linear-loop/SKILL.md
+grep -q "upload video evidence" .claude/skills/harness-linear-loop/SKILL.md
+grep -q "Human Review" .claude/skills/harness-linear-loop/SKILL.md
 grep -q "Test-first Evidence" .github/pull_request_template.md
 
 git diff --check
