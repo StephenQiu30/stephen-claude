@@ -9,6 +9,14 @@ required_files=(
   ".claude/skills/harness-local-server/SKILL.md"
   ".claude/skills/harness-playwright-evidence/SKILL.md"
   ".claude/skills/harness-linear-loop/SKILL.md"
+  "examples/symphony-harness-smoke/README.md"
+  "examples/symphony-harness-smoke/package.json"
+  "examples/symphony-harness-smoke/.env.example"
+  "examples/symphony-harness-smoke/src/server.mjs"
+  "examples/symphony-harness-smoke/scripts/verify.sh"
+  "examples/symphony-harness-smoke/scripts/render-workpad.mjs"
+  "examples/symphony-harness-smoke/tests/e2e/harness.spec.mjs"
+  "examples/symphony-harness-smoke/playwright.config.mjs"
   ".github/pull_request_template.md"
   "docs/README.md"
   "docs/TEMPLATE.md"
@@ -55,6 +63,14 @@ grep -q "Linear API" .claude/skills/harness-linear-loop/SKILL.md
 grep -q "## Claude Workpad" .claude/skills/harness-linear-loop/SKILL.md
 grep -q "upload video evidence" .claude/skills/harness-linear-loop/SKILL.md
 grep -q "Human Review" .claude/skills/harness-linear-loop/SKILL.md
+grep -q "harness-local-server" examples/symphony-harness-smoke/README.md
+grep -q "harness-playwright-evidence" examples/symphony-harness-smoke/README.md
+grep -q "harness-linear-loop" examples/symphony-harness-smoke/README.md
+grep -q "## Claude Workpad" examples/symphony-harness-smoke/scripts/render-workpad.mjs
+grep -q "video: 'on'" examples/symphony-harness-smoke/playwright.config.mjs
+grep -q "trace: 'on'" examples/symphony-harness-smoke/playwright.config.mjs
 grep -q "Test-first Evidence" .github/pull_request_template.md
+
+bash examples/symphony-harness-smoke/scripts/validate-structure.sh
 
 git diff --check
