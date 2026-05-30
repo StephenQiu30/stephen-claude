@@ -6,6 +6,8 @@ required_files=(
   "CLAUDE.md"
   "CLAUDE.local.md"
   "WORKFLOW.md"
+  ".claude/skills/harness-setup/SKILL.md"
+  ".claude/skills/harness-verify/SKILL.md"
   ".github/pull_request_template.md"
   "docs/README.md"
   "docs/TEMPLATE.md"
@@ -37,6 +39,17 @@ grep -q "kind: linear" WORKFLOW.md
 grep -q "project_slug" WORKFLOW.md
 grep -q "## Claude Workpad" WORKFLOW.md
 grep -q "Human Review" WORKFLOW.md
+grep -q "name: harness-setup" .claude/skills/harness-setup/SKILL.md
+grep -q "one-command startup" .claude/skills/harness-setup/SKILL.md
+grep -q "health check" .claude/skills/harness-setup/SKILL.md
+grep -q "env.example" .claude/skills/harness-setup/SKILL.md
+grep -q "logs" .claude/skills/harness-setup/SKILL.md
+grep -q "name: harness-verify" .claude/skills/harness-verify/SKILL.md
+grep -q "Playwright" .claude/skills/harness-verify/SKILL.md
+grep -q "screenshot" .claude/skills/harness-verify/SKILL.md
+grep -q "trace" .claude/skills/harness-verify/SKILL.md
+grep -q "## Claude Workpad" .claude/skills/harness-verify/SKILL.md
+grep -q "Human Review" .claude/skills/harness-verify/SKILL.md
 grep -q "Test-first Evidence" .github/pull_request_template.md
 
 git diff --check
