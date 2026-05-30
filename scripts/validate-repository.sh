@@ -5,6 +5,7 @@ required_files=(
   "README.md"
   "CLAUDE.md"
   "CLAUDE.local.md"
+  "WORKFLOW.md"
   ".github/pull_request_template.md"
   "docs/README.md"
   "docs/TEMPLATE.md"
@@ -31,6 +32,11 @@ grep -q "## Claude Workpad" CLAUDE.md
 grep -q "Human Review" CLAUDE.md
 grep -q "Rework" CLAUDE.md
 grep -q "Playwright" CLAUDE.md
+grep -q "tracker:" WORKFLOW.md
+grep -q "kind: linear" WORKFLOW.md
+grep -q "project_slug" WORKFLOW.md
+grep -q "## Claude Workpad" WORKFLOW.md
+grep -q "Human Review" WORKFLOW.md
 grep -q "Test-first Evidence" .github/pull_request_template.md
 
 git diff --check
