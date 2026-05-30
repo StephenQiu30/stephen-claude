@@ -25,6 +25,12 @@ grep -q "test: add failing tests for xxx" CLAUDE.md
 grep -q "impl: make xxx tests pass" CLAUDE.md
 grep -q "中间产物" CLAUDE.md
 grep -q "npm test" CLAUDE.md
+grep -q "## Symphony-ready 编排原则" CLAUDE.md
+grep -q "Linear ticket" CLAUDE.md
+grep -q "## Claude Workpad" CLAUDE.md
+grep -q "Human Review" CLAUDE.md
+grep -q "Rework" CLAUDE.md
+grep -q "Playwright" CLAUDE.md
 grep -q "Test-first Evidence" .github/pull_request_template.md
 
 git diff --check
