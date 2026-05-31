@@ -42,5 +42,8 @@ grep -q "kind: linear" WORKFLOW.md
 grep -q "project_slug" WORKFLOW.md
 grep -q "## Codex Workpad" WORKFLOW.md
 grep -q "Human Review" WORKFLOW.md
+grep -q 'test:`、`docs:`、`impl:`、`feat:`、`chore:`、`refactor:`' CLAUDE.md
+grep -q "test-first 提交顺序" CLAUDE.md
+grep -q '`impl:` commit' CLAUDE.md
 
 git diff --check
