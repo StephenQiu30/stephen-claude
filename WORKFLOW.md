@@ -32,7 +32,7 @@ agent:
   max_concurrent_agents: 10
   max_turns: 20
 claude:
-  command: claude --dangerously-skip-permissions
+  command: claude -p --dangerously-skip-permissions
 ---
 
 You are working on a Linear ticket `{{ issue.identifier }}`
