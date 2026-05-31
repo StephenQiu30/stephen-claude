@@ -68,6 +68,10 @@ Instructions:
 
 Work only in the provided repository copy. Do not touch any other path.
 
+This Claude template runs Claude by default. Use the `claude:` configuration
+key, `.claude/` paths, and the `## Claude Workpad` marker throughout this
+workflow.
+
 ## Prerequisite: Linear MCP or `linear_graphql` tool is available
 
 The agent should be able to talk to Linear, either via a configured Linear MCP server or injected `linear_graphql` tool. If none are present, stop and ask the user to configure Linear.
