@@ -10,6 +10,12 @@ required_files=(
   ".claude/skills/harness-local-server/SKILL.md"
   ".claude/skills/harness-playwright-evidence/SKILL.md"
   ".claude/skills/harness-linear-loop/SKILL.md"
+  ".claude/skills/harness-quality-gate/SKILL.md"
+  ".claude/skills/using-superpowers/SKILL.md"
+  ".claude/skills/test-driven-development/SKILL.md"
+  ".claude/skills/executing-plans/SKILL.md"
+  ".claude/skills/verification-before-completion/SKILL.md"
+  "scripts/vendor-superpowers-skills.sh"
   ".claude/skills/debug/SKILL.md"
   ".claude/skills/commit/SKILL.md"
   ".claude/skills/pull/SKILL.md"
@@ -39,5 +45,10 @@ grep -q "Human Review" WORKFLOW.md
 grep -q 'test:`、`docs:`、`impl:`、`feat:`、`chore:`、`refactor:`' CLAUDE.md
 grep -q "test-first 提交顺序" CLAUDE.md
 grep -q '`impl:` commit' CLAUDE.md
+grep -q "harness-quality-gate" WORKFLOW.md
+grep -q "superpowers" WORKFLOW.md
+
+test ! -d .agents
+test ! -f skills-lock.json
 
 git diff --check
