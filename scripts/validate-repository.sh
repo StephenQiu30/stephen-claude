@@ -47,13 +47,6 @@ grep -q "project_slug" WORKFLOW.md
 grep -q "## Claude Workpad" WORKFLOW.md
 grep -q "command: claude" WORKFLOW.md
 grep -q "Human Review" WORKFLOW.md
-grep -q 'test:`、`docs:`、`impl:`、`feat:`、`chore:`、`refactor:`' CLAUDE.md
-grep -q "openspec/specs/" CLAUDE.md
-grep -q "兼容性测试" CLAUDE.md || grep -q "兼容性兜底测试" CLAUDE.md
-grep -q "当前项目边界" CLAUDE.md
-grep -q "test-first 提交顺序" CLAUDE.md
-grep -q '`impl:` commit' CLAUDE.md
-grep -q "OpenSpec" README.md
 grep -q "harness-quality-gate" WORKFLOW.md
 grep -q "superpowers" WORKFLOW.md
 
